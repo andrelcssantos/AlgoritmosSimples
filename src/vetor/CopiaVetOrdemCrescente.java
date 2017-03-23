@@ -15,36 +15,37 @@ import java.util.Random;
  * @author andre
  */
 public class CopiaVetOrdemCrescente {
-    
+
     int menor, maior, i, j, numero;
     int[] vet1;
-        int[] vet2;
+    int[] vet2;
 
-    public int[] copiaVet(int qtd){
+    public int[] copiaVet(int qtd) {
         vet1 = new int[qtd];
         vet2 = new int[qtd];
-        for(i = 0; i<vet1.length; i++){
-            System.out.print("\t"+vet1[i]);
+        for (i = 0; i < vet1.length; i++) {
+            System.out.print("\t" + vet1[i]);
+            System.out.print("\n\t" + criaRandom(qtd));
         }
-        
+
         return vet1;
     }
-    
-    public List criaRandom(int qtd){
+
+    public List criaRandom(int qtd) {
         List<Integer> numeros = new ArrayList<Integer>();
-        for(i=0; i<vet1.length; i++){
+        for (i = 0; i < qtd; i++) {
             numeros.add(i);
         }
         Collections.shuffle(numeros);
-        for(i = 0; i<vet1.length; i++){
-            System.out.print("\t"+criaRandom(qtd).get(i));
+        for (i = 0; i < qtd; i++) {
+            System.out.print("\t" + numeros.get(i));
         }
         return numeros;
     }
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         CopiaVetOrdemCrescente a = new CopiaVetOrdemCrescente();
         a.copiaVet(5);
     }
-    
+
 }
