@@ -24,10 +24,8 @@ public class CopiaVetOrdemCrescente {
         vet1 = new int[qtd];
         vet2 = new int[qtd];
         for (i = 0; i < vet1.length; i++) {
-            System.out.print("\t" + vet1[i]);
-            System.out.print("\n\t" + criaRandom(qtd));
+            vet1[i] = (int) criaRandom(qtd).get(i);
         }
-
         return vet1;
     }
 
@@ -37,9 +35,9 @@ public class CopiaVetOrdemCrescente {
             numeros.add(i);
         }
         Collections.shuffle(numeros);
-        for (i = 0; i < qtd; i++) {
-            System.out.print("\t" + numeros.get(i));
-        }
+//        for (i = 0; i < qtd; i++) {
+//            System.out.print("["+i+"] <- {"+numeros.get(i)+"}\n");
+//        }
         return numeros;
     }
 
